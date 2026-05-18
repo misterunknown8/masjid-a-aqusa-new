@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid Donation Portal</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-emerald-800 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-mosque text-2xl text-amber-400"></i>
+                <span class="text-xl font-bold tracking-wide">MUSJID A AQSA</span>
+            </div>
+            <!-- Quick Contact Top Bar -->
+            <div class="flex space-x-4">
+                <a href="tel:+91 6305552582" class="hover:text-amber-400 transition"><i class="fa-solid fa-phone"></i></a>
+                <!-- <a href="https://wa.me/1234567890" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image Background -->
+    <!-- FIX: Ensure the URL inside url('') is correct. I used a live online image so it loads instantly. -->
+    <section class="relative bg-cover bg-center py-20 px-4 text-center text-white" 
+             style="background-image: linear-gradient(rgba(4, 120, 87, 0.85), rgba(4, 120, 87, 0.9)), url('IMG5.jpeg');">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">Support Your Masjid</h1>
+            <p class="text-emerald-100 text-lg mb-6 drop-shadow-sm">"Whoever builds a mosque for Allah, Allah will build for him a house like it in Paradise." (Sahih al-Bukhari)</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#donate-now" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-semibold px-6 py-3 rounded-lg shadow transition">Donate Now</a>
+                <a href="#tracker" class="border border-white hover:bg-white hover:text-emerald-900 px-6 py-3 rounded-lg transition">View Progress</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: 3 Image Gallery / Project Showcase -->
+    <section class="container mx-auto px-4 pt-12 max-w-5xl">
+        <h2 class="text-2xl font-bold text-center text-gray-900 mb-2">Masjid Highlights & Projects</h2>
+        <p class="text-center text-gray-500 mb-8 text-sm">See the impact of your previous donations and active construction works</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <!-- Image 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                <img src="IMG4.jpeg" alt="Masjid Interior" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="font-bold text-gray-800"></h4>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                <img src="IMG3.jpeg" alt="Masjid Exterior" class="w-full h-58 object-cover">
+                <div class="p-4">
+                    <h4 class="font-bold text-gray-800"></h4>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                <img src="IMG6.jpeg" alt="Islamic Education" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="font-bold text-gray-800"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="container mx-auto px-4 py-12 flex-grow max-w-5xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            
+            <!-- Left Column: Progress Tracker & Custom Donation Form -->
+            <div class="space-y-8">
+                <!-- Donation Tracker Card -->
+                <div id="tracker" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-chart-line text-emerald-600 mr-2"></i> Funding Progress
+                    </h2>
+                    <p class="text-sm text-gray-500 mb-2">Help us reach our goal for Masjid maintenance and community services.</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-4 overflow-hidden">
+                        <div class="bg-emerald-600 h-4 rounded-full transition-all duration-500" style="width: 65%;"></div>
+                    </div>
+                    
+                    <!-- Tracker Stats -->
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-emerald-50 p-3 rounded-xl">
+                            <span class="block text-xs text-emerald-700 font-semibold uppercase">Raised So Far</span>
+                            <span class="text-2xl font-bold text-emerald-900">₹1500000</span>
+                        </div>
+                        <div class="bg-amber-50 p-3 rounded-xl">
+                            <span class="block text-xs text-amber-700 font-semibold uppercase">Target Goal</span>
+                            <span class="text-2xl font-bold text-amber-900">₹4500000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Donation Amount Form -->
+                <!-- <div id="donate-now" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-heart-circle-check text-emerald-600 mr-2"></i> Enter Donation Amount
+                    </h2>
+                    <form onsubmit="event.preventDefault(); alert('Redirecting to payment gateway for ₹' + document.getElementById('custom-amount').value);">
+                        <div class="mb-4">
+                            <label for="custom-amount" class="block text-sm font-medium text-gray-700 mb-2">Specify Amount (₹)</label>
+                            <div class="relative rounded-md shadow-sm">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-gray-500 sm:text-sm">₹</span>
+                                </div>
+                                <input type="number" name="amount" id="custom-amount" min="1" class="block w-full pl-7 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-emerald-500 focus:border-emerald-500 text-lg" placeholder="0.00" required>
+                            </div>
+                        </div> -->
+                        <!-- <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md">
+                            Proceed to Secure Pay
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+            <div>
+                <p>
+                    WE ARE A NON-PROFIT ORGANIZATION, AND ALL DONATIONS ARE USED FOR THE MAINTENANCE OF THE MASJID AND TO PROVIDE  TO THE COMMUNITY. YOUR SUPPORT HELPS US CONTINUE OUR MISSION AND SERVE THE COMMUNITY BETTER. JAZAKALLAH KHAYRAN FOR YOUR GENEROSITY AND KINDNESS.
+                </p>
+                <br>
+
+                <P>
+                    OUR CONTACT NUMBER: +91 6305552582
+                    <br>
+                    OUR ADDRESS: ANDHRA PRADESH, INDIA , GUNTUR DISTRICT, TENALI, CHINARAVUR THOTA, 522201
+                    <br>
+                    UPI ID: 8919019193kbl@kbl
+                    
+
+                </P>
+
+
+            </div>
+
+            <!-- Right Column: QR Code & Direct Contacts -->
+            <div class="space-y-8">
+                <!-- QR Code Card -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2 flex items-center justify-center">
+                        <i class="fa-solid fa-qrcode text-emerald-600 mr-2"></i> Scan to Donate
+                    </h2>
+                    <p class="text-sm text-gray-500 mb-6">Scan using your banking, UPI.</p>
+                    
+                    <div class="bg-gray-100 p-4 rounded-xl inline-block border-2 border-dashed border-gray-200 mb-4">
+                        <img src="IMG2.jpeg" alt="Donation QR Code" class="w-48 h-48 mx-auto">
+                    </div>
+                   <!-- <a 
+href="upi://pay?ver=01&orgid=159052&mode=01&pa=8919019193kbl@kbl&pn=AQSA%20MASJID%20"
+class="w-full block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md"
+>
+Proceed to Donate
+</a> -->
+                </div>
+
+                <!-- Quick Action Buttons (Call / WhatsApp) -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Need Assistance or Cash Pickups?</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="tel:+91 6305552582" class="flex flex-col items-center justify-center bg-blue-50 hover:bg-blue-100 text-blue-700 py-4 px-4 rounded-xl transition font-medium border border-blue-200">
+                            <i class="fa-solid fa-phone text-2xl mb-2"></i>
+                            <span>Call Us</span>
+                        </a>
+                        <!-- <a href="https://wa.me/1234567890" target="_blank" class="flex flex-col items-center justify-center bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-4 px-4 rounded-xl transition font-medium border border-emerald-200">
+                            <i class="fa-brands fa-whatsapp text-3xl mb-1"></i> -->
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer / Developer Contact Banner -->
+    <footer class="bg-gray-900 text-gray-400 mt-auto">
+        <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-gray-950 py-4 px-4 text-center font-medium">
+            <p class="text-sm md:text-base">
+                <i class="fa-solid fa-code mr-1"></i> Want a beautiful donation website like this for your organization? 
+                <a href="mailto:misterunknown852@gmail.com" class="underline font-bold text-emerald-950 hover:text-black transition ml-1">Contact Developer via Email</a>
+            </p>
+        </div>
+        <div class="container mx-auto px-4 py-6 text-center text-xs">
+            <p>&copy; 2026 MUSJID A AQSA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
