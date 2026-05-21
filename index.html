@@ -115,7 +115,7 @@
                     <!-- Tracker Stats -->
                     <div class="grid grid-cols-2 gap-4 text-center">
                         <div class="bg-emerald-50 p-3 rounded-xl">
-                            <span class="block text-xs text-red-700 font-semibold uppercase">Raised So Far</span>
+                            <span class="block text-xs text-red-700 font-semibold uppercase">Amount we collected</span>
                             <span class="text-2xl font-bold text-red-900">₹150000</span>
                         </div>
                         <div class="bg-amber-50 p-3 rounded-xl">
@@ -132,7 +132,7 @@
                     </h2>
                     <form onsubmit="event.preventDefault(); alert('Redirecting to payment gateway for ₹' + document.getElementById('custom-amount').value);">
                         <div class="mb-4">
-                            <label for="custom-amount" class="block text-sm font-medium text-gray-700 mb-2">Specify Amount (₹)</label>
+                            <!-- <label for="custom-amount" class="block text-sm font-medium text-gray-700 mb-2">Specify Amount (₹)</label>
                             <div class="relative rounded-md shadow-sm">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <span class="text-gray-500 sm:text-sm">₹</span>
@@ -142,17 +142,17 @@
                         </div> -->
                         <!-- <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md">
                             Proceed to Secure Pay
-                        </button> -->
+                        </button> --> 
                     </form>
                 </div>
             </div>
             <div>
-                <p>
+                <p style="color: blue;">
                     WE ARE A NON-PROFIT ORGANIZATION, AND ALL DONATIONS ARE USED FOR THE MAINTENANCE OF THE MASJID AND TO PROVIDE  TO THE COMMUNITY. YOUR SUPPORT HELPS US CONTINUE OUR MISSION AND SERVE THE COMMUNITY BETTER. JAZAKALLAH KHAYRAN FOR YOUR GENEROSITY AND KINDNESS.
                 </p>
                 <br>
 
-                <P>
+                <P style="color: green;">
                     OUR CONTACT NUMBER: +91 6305552582
                     <br>
                     OUR ADDRESS: ANDHRA PRADESH, INDIA , GUNTUR DISTRICT, TENALI, CHINARAVUR THOTA, 522201
@@ -170,7 +170,7 @@
                 <!-- QR Code Card -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
                     <h2 class="text-xl font-bold text-gray-900 mb-2 flex items-center justify-center">
-                        <i class="fa-solid fa-qrcode text-emerald-600 mr-2"></i> Scan to Donate
+                        <i class="fa-solid fa-qrcode text-emerald-600 mr-2"></i> Scan to Donate or Click the Button Below
                     </h2>
                     <p class="text-sm text-gray-500 mb-6">Scan using your banking, UPI.</p>
                     
@@ -180,12 +180,12 @@
                             <img src="IMG2.jpeg" alt="Donation QR Code" class="w-full h-50 mx-auto">
                         </a>
                     </div>
-                   <!-- <a 
+                   <a 
 href="upi://pay?ver=01&orgid=159052&mode=01&pa=8919019193kbl@kbl&pn=AQSA%20MASJID%20"
 class="w-full block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md"
 >
 Proceed to Donate
-</a> -->
+</a>
                 </div>
 
                 <!-- Quick Action Buttons (Call / WhatsApp) -->
